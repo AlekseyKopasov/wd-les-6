@@ -17,7 +17,7 @@
 <body class="shower full">
   <header class="caption">
     <h1>Веб-разработка</h1>
-    <p>Лекция 6: JavaScript</p>
+    <p>Лекция 6: CSS_3</p>
   </header>
 
   <section class="slide clear">
@@ -25,7 +25,93 @@
   </section>
 
   <section class="slide clear">
-    <h2 class="shout">JavaScript</h2>
+    <h2 class="shout">CSS</h2>
+  </section>
+
+
+
+  <section class="slide">
+    <h2>Пиксель</h2>
+    <ul>
+      <li>физический пиксель</li>
+      <li>CSS-пиксель</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Пиксель</h2>
+    <ul>
+      <li><b>физический пиксель</b> — пиксель на матрице устройства </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>PPI</h2>
+    <p><b>Pixels per Inch</b> — единица измерения плотности экранов</p>
+  </section>
+
+  <section class="slide">
+    <h2>CSS-пиксель</h2>
+    <p>разработчики работают только с CSS-пикселями</p>
+    <p>1 CSS-пиксель = 1/96 дюйма или 0,26 мм или 1 физический пиксель</p>
+  </section>
+
+  <section class="slide">
+    <h2>Ретина-дисплеи</h2>
+    <p><b>Ретиной</b> называют дисплеи Apple с повышенной плотностью
+      пикселей на
+      квадратный дюйм</p>
+  </section>
+  </section>
+
+  <section class="slide">
+    <h2>Как узнать плотность пикселей</h2>
+    <ul>
+      <li><b>Apple</b>: зайти на официальный сайт, выбрать интересующий
+        девайс и
+        нажать на кнопку «Спецификация»</li>
+      <li><b>для других устройств</b>: можно воспользоваться
+        онлайн-калькулятором (7pads.com, myresolutionis.ru или
+        prostudio.ru)
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Особенности вёрстки под ретина-экраны</h2>
+    <ol>
+      <li><b>текст</b>: все тексты на сайте нужно добавлять не
+        изображениями, а
+        с помощью &lt;p&gt;, &lt;h1...h6&gt;, &lt;span&gt; и других
+        тегов.
+        <mark>Исключение — логотипы</mark>
+      </li>
+      <li><b>иконки и декоративные изображения</b>: лучшее решение для
+        иконок и
+        декоративных элементов — использование формата SVG</li>
+      <li><b>контентные и фоновые изображения</b>: обычно используют PNG,
+        JPG,
+        WebP и другие растровые форматы</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Особенности вёрстки под ретина-экраны</h2>
+    <p>Графика должна быть подготовлена как минимум <mark>для двух вариантов
+        экранов</mark>. Один для обычных дисплеев, второй, с увеличенным
+      количеством пикселей — для ретины</p>
+  </section>
+
+  <section class="slide">
+    <h2>Фоновые изображения для ретина-экранов</h2>
+    <pre>
+    <code>.element {</code>
+    <code>  background-image: url("../image.png");</code>
+    <code class="mark">  @media (min-resolution: 2dppx) {</code>
+    <code class="mark">    background-image: url("../image@2x.png");</code>
+    <code class="mark">  }</code>
+    <code>}</code>
+  </pre>
   </section>
 
   <!-- TODO   -->
