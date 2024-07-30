@@ -1,0 +1,40 @@
+.center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-image h2 {
+  color: #ffffff;
+}
+
+mark.important {
+  background-color: var(--color-red);
+  color: #ffffff;
+}
+
+mark.ignore {
+  background-color: var(--color-blue-lighter);
+  color: #ffffff;
+}
+
+.slide pre {
+  font-size: 20px;
+}
+
+.justify-end {
+  justify-items: flex-end;
+}
+
+cite.small {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.8;
+}
