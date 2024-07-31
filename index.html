@@ -88,9 +88,62 @@
     <h2>Стилизация форм</h2>
     <ol>
       <li>Базовые стили</li>
-      <li>Шрифты и текст</li>
       <li>Позиционирование</li>
     </ol>
+  </section>
+
+  <section class="slide">
+    <h2>&lt;input&gt;</h2>
+    <form style="margin-bottom: 24px;">
+      <fieldset>
+        <label>
+          Поле 1
+          <input type="text" style="
+              padding: 14px;
+              background-color: rgba(127, 255, 212, 0.4);
+              border: 1px solid #000000;
+            ">
+        </label>
+      </fieldset>
+    </form>
+
+    <div class="columns two">
+      <ul>
+        <li><b>padding</b> — внутренние отступы</li>
+        <li><b>margin</b> — внешние отступы</li>
+        <li><b>border</b> — граница</li>
+        <li><b>box-shadow</b> — тень</li>
+      </ul>
+      <ul>
+        <li><b>border-radius</b> — скругления границ</li>
+        <li><b>width</b> — ширина</li>
+        <li><b>font</b> — шрифт</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>box-sizing</h2>
+    <p>Свойство <mark>box-sizing</mark> определяет, как будут вести себя размеры
+      блока</p>
+    <ol>
+      <li><b>content-box</b> — значение по умолчанию. Финальная ширина = ширина
+        + правый внутренний отступ + левый внутренний отступ + правая рамка +
+        левая рамка</li>
+      <li><b>border-box</b> — значение width и height являются финальными
+        размерами элемента. Финальная ширина = ширина
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>box-sizing</h2>
+    <p>Сброс стилей с помощью универсального селектора</p>
+    <pre>
+      <code>* {</code>
+      <code>  box-sizing: border-box;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <section class="slide">
@@ -138,36 +191,6 @@
   </section>
 
   <section class="slide">
-    <h2>&lt;input&gt;</h2>
-    <form style="margin-bottom: 24px;">
-      <fieldset>
-        <label>
-          Поле 1
-          <input type="text" style="
-              padding: 14px;
-              background-color: rgba(127, 255, 212, 0.4);
-              border: 1px solid #000000;
-            ">
-        </label>
-      </fieldset>
-    </form>
-
-    <div class="columns two">
-      <ul>
-        <li><b>padding</b> — внутренние отступы</li>
-        <li><b>margin</b> — внешние отступы</li>
-        <li><b>border</b> — граница</li>
-        <li><b>box-shadow</b> — тень</li>
-      </ul>
-      <ul>
-        <li><b>border-radius</b> — скругления границ</li>
-        <li><b>width</b> — ширина</li>
-        <li><b>font</b> — шрифт</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="slide">
     <h2>&lt;textarea&gt;</h2>
     <form style="margin-bottom: 24px;">
       <label>
@@ -191,6 +214,21 @@
       <code>}</code>
     </pre>
   </section>
+
+  <!-- TODO Проблемы стилизации элементов форм -->
+  <section class="slide">
+    <h2>Проблемы стилизации элементов форм</h2>
+  </section>
+
+
+
+
+
+
+
+
+
+
 
 
 
