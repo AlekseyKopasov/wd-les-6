@@ -28,15 +28,213 @@
     <h2 class="shout">CSS</h2>
   </section>
 
-
+  <!-- TODO Стилизация форм -->
+  <section class="slide">
+    <h2>Стилизация форм</h2>
+    <img src="img/form.jpg" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+      margin: 0 auto;
+      display: flex;
+    ">
+  </section>
 
   <section class="slide">
-    <h2>Пиксель</h2>
-    <ul>
-      <li>физический пиксель</li>
-      <li>CSS-пиксель</li>
-    </ul>
+    <h2>Стилизация форм</h2>
+    <div class="columns two">
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Хорошо стилизуются</h3>
+        <ul>
+          <li>&lt;form&gt; </li>
+          <li>&lt;fieldset&gt;</li>
+          <li>&lt;label&gt;</li>
+          <li>&lt;output&gt;</li>
+          <li>&lt;input&gt;</li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Плохо стилизуются</h3>
+        <ul>
+          <li>&lt;legend&gt;</li>
+          <li>placeholder </li>
+          <li>checkboxes/radiobuttons</li>
+        </ul>
+      </div>
+    </div>
   </section>
+
+  <section class="slide">
+    <h2>Стилизация форм</h2>
+    <div style="display: flex; flex-direction: column;">
+      <h3 style="
+          display: flex;
+          margin: 0;
+          line-height: 1.2;">Не стилизуются</h3>
+      <ul>
+        <li>элементы управления диапазоном, цветом или датой</li>
+        <li>&lt;select&gt;, &lt;option&gt;</li>
+        <li>&lt;input type=&quot;file&quot;&gt;</li>
+        <li>&lt;optgroup&gt;&lt;datalist&gt;&lt;progress&gt;&lt;meter&gt;</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Стилизация форм</h2>
+    <ol>
+      <li>Базовые стили</li>
+      <li>Позиционирование</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>&lt;input&gt;</h2>
+    <form style="margin-bottom: 24px;">
+      <fieldset>
+        <label>
+          Поле 1
+          <input type="text" style="
+              padding: 14px;
+              background-color: rgba(127, 255, 212, 0.4);
+              border: 1px solid #000000;
+            ">
+        </label>
+      </fieldset>
+    </form>
+
+    <div class="columns two">
+      <ul>
+        <li><b>padding</b> — внутренние отступы</li>
+        <li><b>margin</b> — внешние отступы</li>
+        <li><b>border</b> — граница</li>
+        <li><b>box-shadow</b> — тень</li>
+      </ul>
+      <ul>
+        <li><b>border-radius</b> — скругления границ</li>
+        <li><b>width</b> — ширина</li>
+        <li><b>font</b> — шрифт</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>box-sizing</h2>
+    <p>Свойство <mark>box-sizing</mark> определяет, как будут вести себя размеры
+      блока</p>
+    <ol>
+      <li><b>content-box</b> — значение по умолчанию. Финальная ширина = ширина
+        + правый внутренний отступ + левый внутренний отступ + правая рамка +
+        левая рамка</li>
+      <li><b>border-box</b> — значение width и height являются финальными
+        размерами элемента. Финальная ширина = ширина
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>box-sizing</h2>
+    <p>Сброс стилей с помощью универсального селектора</p>
+    <pre>
+      <code>* {</code>
+      <code>  box-sizing: border-box;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>&lt;legend&gt;</h2>
+    <form>
+      <fieldset style="
+        margin-bottom: 24px;
+        background-color: rgba(127, 255, 212, 0.4);">
+        <legend style="
+            color: #0a1e59;
+          "> Заголовок 1 (legend)</legend>
+        <label>
+          <input type="text">
+          Поле 1
+        </label>
+        <label>
+          <input type="text">
+          Поле 2
+        </label>
+        <label>
+          <input type="text">
+          Поле 3
+        </label>
+      </fieldset>
+      <fieldset style="
+        margin-bottom: 24px;
+        background-color: rgba(127, 255, 212, 0.4);">
+        <legend style="
+          color: #0a1e59;
+        ">Заголовок 2 (legend)</legend>
+        <label>
+          <input type="text">
+          Поле 1
+        </label>
+        <label>
+          <input type="text">
+          Поле 2
+        </label>
+        <label>
+          <input type="text">
+          Поле 3
+        </label>
+      </fieldset>
+    </form>
+  </section>
+
+  <section class="slide">
+    <h2>&lt;textarea&gt;</h2>
+    <form style="margin-bottom: 24px;">
+      <label>
+        <textarea rows="3" cols="33" placeholder="Расскажите о себе..." style="
+          width: 100%;
+          height: 100%;
+          padding: 14px;
+          background-color: rgba(127, 178, 255, 0.4);
+          border: 1px solid #000000;
+          "></textarea>
+      </label>
+    </form>
+
+    <p>CSS-свойство <mark>resize</mark> запрещает или разрешает изменение
+      размеров textarea
+    </p>
+
+    <pre>
+      <code>textarea {</code>
+      <code>  resize: none;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <!-- TODO Проблемы стилизации элементов форм -->
+  <section class="slide">
+    <h2>Проблемы стилизации элементов форм</h2>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <section class="slide">
     <h2>Пиксель</h2>
