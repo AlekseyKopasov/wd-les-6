@@ -217,7 +217,91 @@
 
   <!-- TODO Проблемы стилизации элементов форм -->
   <section class="slide">
-    <h2>Проблемы стилизации элементов форм</h2>
+    <h2>Стилизация форм</h2>
+    <div class="columns two">
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Плохо стилизуются</h3>
+        <ul>
+          <li>&lt;legend&gt;</li>
+          <li>placeholder</li>
+          <li>checkboxes/radiobuttons</li>
+          <li>&lt;input type=&quot;search&quot;&gt;</li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Не стилизуются</h3>
+        <ul>
+          <li>элементы управления диапазоном, цветом или датой</li>
+          <li>&lt;select&gt;, &lt;option&gt;</li>
+          <li>&lt;input type=&quot;file&quot;&gt;</li>
+          <li>&lt;optgroup&gt;, &lt;datalist&gt;, &lt;progress&gt;,
+            &lt;meter&gt;</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Управление стилем на уровне ОС</h2>
+  </section>
+
+  <section class="slide">
+    <h2>appearance</h2>
+    <p><mark>appearance</mark> - позволяет задавать внешний вид одних элементов
+      другим элементам. Браузер будет отрисовывать элементы с учётом
+      операционной системы и темы оформления.</p>
+    <pre>
+        <code>input {</code>
+        <code>  appearance: none; // для сброса системных стилей</code>
+        <code>}</code>
+      </pre>
+  </section>
+
+  <section class="slide">
+    <h2>radiobuttons и checkboxes</h2>
+    <p>Внешний вид радиокнопок и чекбоксов разнится в зависимости от браузера и
+      ОС
+    </p>
+    <label>
+      <input type="checkbox">
+      чекбокс
+      <pre>
+        <code>&lt;input type=&quot;checkbox&quot;&gt;</code>
+      </pre>
+    </label>
+    <label>
+      <input type="radio">
+      радиокнопка
+      <pre>
+        <code>&lt;input type=&quot;radio&quot;&gt;</code>
+      </pre>
+    </label>
+  </section>
+
+  <section class="slide">
+    <h2>А что делать с "некрасивыми"?</h2>
+    <ul>
+      <li>элементы управления диапазоном, цветом или датой</li>
+      <li>&lt;select&gt;, &lt;option&gt;</li>
+      <li>&lt;input type=&quot;file&quot;&gt;</li>
+      <li>&lt;optgroup&gt;, &lt;datalist&gt;, &lt;progress&gt;,
+        &lt;meter&gt;</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>А что делать с "некрасивыми"?</h2>
+    <video src="img/this-is-sparta.mp4" autoplay muted preload="none" style="
+        width: 100%;
+        height: auto;
+        max-height: 390px;
+      "></video>
   </section>
 
 
