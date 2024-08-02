@@ -304,6 +304,172 @@
       "></video>
   </section>
 
+  <section class="slide">
+    <h2>А что делать с "некрасивыми"?</h2>
+    <p>универсальных решений не существует, но современные браузеры постепенно
+      реализуют в стандартах и в своих продуктах новые элементы, возможности и
+      API</p>
+  </section>
+
+  <section class="slide">
+    <h2>Новые (экспериментальные) html-элементы</h2>
+    <ul>
+      <li><b>Popover API</b> — для создания всплывающих окон со всеми функциями
+        без использования JavaScript</li>
+      <li><b>API CSS Anchor Positioning</b> — позволяет естественным образом
+        позиционировать элементы относительно других элементов</li>
+      <li><b>selectmenu</b> — по умолчанию похож на &lt;select&gt;, но может
+        быть
+        оформлен и настроен практически любым способом</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Новые (экспериментальные) html-элементы</h2>
+    <ul>
+      <li><a href="https://doka.guide/html/popover/" target="_blank">Popover
+          API</a></li>
+      <li><a
+          href="https://developer.chrome.com/blog/anchor-positioning-api?hl=ru"
+          target="_blank">Представляем API позиционирования привязки CSS</a>
+      </li>
+      <li><a href="https://css-tricks.com/the-selectmenu-element/"
+          target="_blank">Say Hello to selectmenu, a Fully Style-able select
+          Element</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+    <img src="img/картинка для состояний.jpg" width="auto" height="100%"
+      alt="Состояния интерактивных элементов" style="
+        object-fit: cover;
+        max-height: 389px;
+        margin: 0 auto;
+        display: flex;
+      ">
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+
+    <p><mark>Интерактивные элементы</mark> — это элементы, с которыми
+      пользователи могут взаимодействовать</p>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+    <ul>
+      <li><b>normal</b> — элемент интерактивен и включен</li>
+      <li><b>hover</b> — пользователь навел курсор на элемент</li>
+      <li><b>focus</b> — пользователь выделил элемент, используя клавиатуру или
+        другой метод ввода</li>
+      <li><b>active</b> — активное или нажатое состояние</li>
+      <li><b>progress/loading</b> — элемент находится в процессе завершения
+        действия</li>
+      <li><b>disabled</b> — элемент в настоящее время не является интерактивным,
+        может быть включен в будущем</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+    <ol>
+      <li>:hover</li>
+      <li>:focus</li>
+      <li>:active</li>
+      <li>:disabled</li>
+      <li>:focus-visible</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+    <p><b>Псевдоклассы</b> в CSS — это специальные селекторы, которые уточняют
+      состояние или тип элемента </p>
+
+    <pre>
+        <code>a:hover {</code>
+        <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Основные состояния интерактивных элементов</h2>
+    <p>Состояние <b>:hover</b> срабатывает, когда пользователь наводит курсор на
+      элемент</p>
+
+    <pre>
+        <code>a:hover {</code>
+        <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Основные состояния интерактивных элементов</h2>
+    <p>Состояние <b>:focus</b> срабатывает при клике на элемент или переходе на
+      него с клавиатуры при помощи клавиши tab</p>
+
+    <pre>
+        <code>a:focus {</code>
+        <code>  color: orange;</code>
+        <code>}</code>
+      </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Основные состояния интерактивных элементов</h2>
+    <p>Состояние <b>:active</b> срабатывает, когда пользователь взаимодействует
+      с элементом, например, когда удерживает кнопку мыши на элементе</p>
+
+    <pre>
+        <code>a:active {</code>
+        <code>  color: black;</code>
+        <code>}</code>
+      </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния и доступность сайта</h2>
+    <p>Не все пользователи используют мышь, поэтому важно, чтобы по сайту можно
+      было перемещаться при помощи клавиатуры или других альтернативных
+      устройств</p>
+  </section>
+
+  <section class="slide">
+    <h2>Состояния интерактивных элементов</h2>
+    <div class="columns two">
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Не правильно (плохо)</h3>
+
+        <pre>
+            <code>a:hover,</code>
+            <code>a:focus,</code>
+            <code>a:active {</code>
+            <code>  ...</code>
+            <code>}</code>
+          </pre>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <h3 style="
+            display: flex;
+            margin: 0;
+            line-height: 1.2;">Правильно</h3>
+
+        <pre>
+          <code>a:hover { ... }</code>
+          <code>a:focus { ... }</code>
+          <code>a:active { ... }</code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
 
 
 
