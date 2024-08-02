@@ -6,7 +6,7 @@
     "archive": "shower archive",
     "bundle": "shower bundle",
     "publish": "shower publish",
-    "push": "git add . && git cm -m \"обновляет слайды\" && git push origin master && npm run publish"
+    "push": "git add . && git ci -m \"обновляет слайды\" && git push origin master && npm run publish"
   },
   "devDependencies": {
     "@shower/cli": "^0.3.1"
