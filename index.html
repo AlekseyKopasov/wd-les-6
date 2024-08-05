@@ -1420,10 +1420,10 @@
     </div>
 
     <script>
-      let targeBtn = document.querySelector('[data-add-class="target"]');
+      let targetBtn = document.querySelector('[data-add-class="target"]');
       let hiddenBlock = document.querySelector('[data-add-class="hidden"]');
 
-      targeBtn.addEventListener('click', () => {
+      targetBtn.addEventListener('click', () => {
         hiddenBlock.classList.toggle('show');
       });
     </script>
@@ -1433,23 +1433,27 @@
     <h2>Верстка выплывающих элементов</h2>
     <pre>
       <code>&lt;script&gt;</code>
-      <code>  let targeBtn = document.querySelector('[data-add-class=&quot;target&quot;]');</code>
+      <code>  let targetBtn = document.querySelector('[data-add-class=&quot;target&quot;]');</code>
       <code>  let hiddenBlock = document.querySelector('[data-add-class=&quot;hidden&quot;]');</code>
       <code>  </code>
-      <code>  targeBtn.addEventListener('click', () =&gt; {</code>
+      <code>  targetBtn.addEventListener(<mark>'click'</mark>, () =&gt; {</code>
       <code>    hiddenBlock.classList.toggle('show');</code>
       <code>  });</code>
       <code>&lt;/script&gt;</code>
     </pre>
   </section>
 
+  <!-- TODO Поток документа -->
+  <section class="slide">
+    <h2>Поток документа</h2>
 
+    <p><b>поток документа</b> — это система, посредством которой элементы размещаются внутри окна просмотра браузера</p>
 
-
-
-
-
-
+    <ol>
+      <li><b>блочные элементы</b> занимают всю ширину документа. Располагаются вертикально</li>
+      <li><b>строчные элементы</b> не переносятся на новые строки; строчные элементы располагаются на той же строке, что и другие и занимают всю ширину родительского элемента, до тех пор, пока не закончится пространство</li>
+    </ol>
+  </section>
 
 
 
