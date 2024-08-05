@@ -470,6 +470,984 @@
     </div>
   </section>
 
+  <!-- TODO Анимации в CSS -->
+  <section class="slide">
+    <h2>Анимации в CSS</h2>
+  </section>
+
+  <section class="slide">
+    <h2>@keyframes</h2>
+    <p><b>Анимация</b> — это переход от одного состояния элемента к другому состоянию</p>
+    <p>Чтобы рассказать браузеру, с чего начать и чем закончить анимацию, используется директива <b>@keyframes</b></p>
+  </section>
+
+  <section class="slide">
+    <h2>Анимации в CSS</h2>
+
+    <div class="columns two animations-view-wrap">
+      <div class="animations-view">
+        <div class="circle"></div>
+        <div class="square"></div>
+      </div>
+      <pre style="font-size: 16px;">
+        <code>@keyframes circle-to-square {</code>
+        <code>  <mark>from</mark> {</code>
+        <code>    width: 50px;</code>
+        <code>    height: 50px;</code>
+        <code>    background-color: #4d58f0;</code>
+        <code>  }</code>
+        <code>  <mark>to</mark> {</code>
+        <code>    width: 200px;</code>
+        <code>    height: 200px;</code>
+        <code>    background-color: #309b30;</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Анимации в CSS</h2>
+
+    <div class="columns two animations-view-wrap">
+      <div class="animations-view">
+        <div class="circle"></div>
+        <div class="square"></div>
+      </div>
+      <pre style="font-size: 12px;">
+        <code>@keyframes circle-to-square {</code>
+        <code>  <mark>from</mark> {</code>
+        <code>    width: 50px;</code>
+        <code>    height: 50px;</code>
+        <code>    background-color: #4d58f0;</code>
+        <code>  }</code>
+        <code>  <mark>50%</mark> {</code>
+        <code>    width: 50px;</code>
+        <code>    height: 200px;</code>
+        <code>    background-color: #82309b;</code>
+        <code>  }</code>
+        <code>  <mark>to</mark> {</code>
+        <code>    width: 200px;</code>
+        <code>    height: 200px;</code>
+        <code>    background-color: #309b30;</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-name</h2>
+    <p>Задает <b>имя</b> анимации и присваивает ее элементу, к которому она применяется</p>
+    <div class="columns two animations-view-wrap">
+      <div class="animations-view">
+        <div class="circle"></div>
+        <div class="square"></div>
+      </div>
+      <pre>
+        <code>.circle {</code>
+        <code>  <mark>animation-name</mark>: circle-to-square;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-duration</h2>
+    <p>Задает <b>длительность</b> одного цикла анимации</p>
+    <div class="columns two animations-view-wrap">
+      <div class="animations-view">
+        <div class="circle"
+          style="
+          animation-name: circle-to-square;
+          animation-duration: 5s;
+          "
+        ></div>
+        <div class="square"></div>
+      </div>
+      <pre>
+        <code>.circle {</code>
+        <code>  animation-name: circle-to-square;</code>
+        <code>  <mark>animation-duration</mark>: 5s;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-iteration-count</h2>
+    <p>Задает <b>количество</b> повторений анимации</p>
+    <pre>
+      <code>.circle {</code>
+      <code>  animation-name: circle-to-square;</code>
+      <code>  animation-duration: 5s;</code>
+      <code>  <mark>animation-iteration-count</mark>: infinite;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>animation-iteration-count</h2>
+    <p>Задает <b>количество</b> повторений анимации</p>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        "
+      ></div>
+      <div class="square"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-direction</h2>
+    <p>Сообщает браузеру, должна ли анимация проигрываться в обратном порядке</p>
+
+    <ol style="font-size: 17px;">
+      <li><b>normal</b> — значение по умолчанию, анимация воспроизводится от начала до конца, после чего возвращается к начальному кадру</li>
+      <li><b>reverse</b> — анимация проигрывается в обратном порядке, от последнего ключевого кадра до первого, после чего возвращается к последнему кадру</li>
+      <li><b>alternate</b> —  каждый нечётный повтор (первый, третий, пятый) анимации воспроизводится в прямом порядке, а каждый чётный повтор (второй, четвёртый, шестой) анимации воспроизводится в обратном порядке</li>
+      <li><b>alternate-reverse</b> — аналогично значению alternate, но чётные и нечётные повторы меняются местами</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>animation-direction</h2>
+    <p>Сообщает браузеру, должна ли анимация проигрываться в обратном порядке</p>
+    <pre>
+      <code>.circle {</code>
+      <code>  animation-name: circle-to-square;</code>
+      <code>  animation-duration: 5s;</code>
+      <code>  animation-iteration-count: infinite;</code>
+      <code>  <mark>animation-direction</mark>: alternate;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>animation-direction</h2>
+    <p>Сообщает браузеру, должна ли анимация проигрываться в обратном порядке</p>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        "
+      ></div>
+      <div class="square"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-timing-function</h2>
+    <p style="font-size: 20px;">Устанавливает, согласно какой функции времени должна происходить анимация каждого цикла между ключевыми кадрами <a href="https://doka.guide/css/animation/demos/timing-functions/" target="_blank">(Demo)</a></p>
+
+    <ol style="font-size: 17px;">
+      <li><b>ease</b> — значение по умолчанию. Анимация начинается медленно, затем быстро разгоняется и снова замедляется к концу</li>
+      <li><b>ease-in</b> — начинается медленно и плавно ускоряется к концу</li>
+      <li><b>ease-out</b> — начинается быстро и плавно замедляется к концу</li>
+      <li><b>ease-in-out</b> — начинается и заканчивается медленно, ускоряясь в середине</li>
+      <li><b>cubic-bezier(x1, y1, x2, y2)</b> — временная функция, описывающая тип ускорения в виде кривой Безье</li>
+      <li><b>steps(количество шагов, положение шага)</b> — анимация воспроизводится шагами, резко переходя от одного состояния к другому</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>animation-timing-function</h2>
+    <pre>
+      <code>.circle {</code>
+      <code>  animation-name: circle-to-square;</code>
+      <code>  animation-duration: 5s;</code>
+      <code>  animation-iteration-count: infinite;</code>
+      <code>  animation-direction: alternate;</code>
+      <code>  <mark>animation-timing-function</mark>: ease-in;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>cubic-bezier</h2>
+   <p><a href="https://cubic-bezier.com/#.17,.67,.83,.67" target="_blank">cubic-bezier.com</a></p>
+   <img src="img/cb.png" alt="" style="
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 300px;
+   ">
+  </section>
+
+  <section class="slide">
+    <h2>animation-direction</h2>
+    <p>Устанавливает, согласно какой функции времени должна происходить анимация каждого цикла между ключевыми кадрами</p>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+        "
+      ></div>
+      <div class="square"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Анимация для второй фигуры</h2>
+    <pre>
+      <code>animation-name: square-to-circle</code>
+      <code>animation-direction: alternate-reverse;</code>
+    </pre>
+    <div class="animations-view">
+      <div class="circle" style="
+      animation-name: circle-to-square;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+      "
+      ></div>
+      <div class="square" style="
+      animation-name: square-to-circle;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in;
+      "></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-delay</h2>
+    <p>Свойство задаёт <b>задержку</b> воспроизведения анимации</p>
+    <pre>
+      <code>.square {</code>
+      <code>  animation-name: square-to-circle;</code>
+      <code>  animation-duration: 5s;</code>
+      <code>  animation-iteration-count: infinite;</code>
+      <code>  animation-direction: alternate-reverse;</code>
+      <code>  <mark>animation-delay</mark>: 3s;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>animation-delay</h2>
+    <p>Свойство задаёт <b>задержку</b> воспроизведения анимации</p>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        "
+      ></div>
+      <div class="square" style="
+      animation-name: square-to-circle;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in;
+      animation-delay: 3s;
+      "></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-play-state</h2>
+    <p>Свойство, позволяющее ставить анимацию на паузу и запускать снова</p>
+    <ol>
+      <li><b>running</b> — анимация проигрывается (значение по умолчанию)</li>
+      <li><b>paused</b> — анимация ставится на паузу</li>
+    </ol>
+    <pre>
+      <code>.circle:hover, </code>
+      <code>.square:hover {</code>
+      <code>  <mark>animation-play-state</mark>: paused;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>animation-play-state</h2>
+    <p>Наведите курсор на фигуру,чтобы остановить анимацию</p>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        "
+      ></div>
+      <div class="square" style="
+      animation-name: square-to-circle;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in;
+      animation-delay: 3s;
+      "></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation-fill-mode</h2>
+    <p>Сообщает браузеру, нужно ли применять стили ключевых кадров до или после проигрывания анимации</p>
+    <ol style="font-size: 18px;">
+      <li><b>none</b> — стили анимации не применяются до и после проигрывания анимации (значение по умолчанию)</li>
+      <li><b>forwards</b> — после окончания анимации элемент сохранит стили последнего ключевого кадра</li>
+      <li><b>backwards</b> — после окончания анимации к элементу будут применены стили первого ключевого кадра</li>
+      <li><b>both</b> — до начала анимации к элементу применяется первый ключевой кадр, а после окончания анимации элемент останется в состоянии последнего ключевого кадра</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>animation-fill-mode </h2>
+    <pre>
+      <code>animation-fill-mode: forwards;</code>
+    </pre>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation-name: circle-to-square;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        "
+      ></div>
+      <div class="square" style="
+      animation-name: square-to-circle;
+      animation-duration: 5s;
+      animation-timing-function: ease-in;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      "></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>animation</h2>
+    <p> <mark>animation</mark> — это шорткат, в котором можно за раз указать значения для всех свойств</p>
+    <pre>
+      <code>.circle {</code>
+      <code>  animation: circle-to-square 5s infinite alternate ease-in 3s;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Несколько анимаций</h2>
+    <p>К одному элементу можно применить несколько анимаций</p>
+    <pre>
+      <code>@keyframes shake {</code>
+      <code>  from {</code>
+      <code>    transform: translateX(-25px);</code>
+      <code>  }</code>
+      <code>  to {</code>
+      <code>    transform: translateX(25px);</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Несколько анимаций</h2>
+    <pre>
+      <code>.circle {</code>
+      <code>  animation: <mark>circle-to-square</mark> 5s infinite alternate-reverse ease-in 3s <mark class="important">,</mark></code>
+      <code>  <mark>shake</mark> 2s infinite alternate linear;</code>
+      <code>}</code>
+    </pre>
+    <div class="animations-view">
+      <div class="circle"
+        style="
+        animation: circle-to-square 5s infinite alternate ease-in,
+        shake 2s infinite alternate linear;
+        "
+      ></div>
+    </div>
+  </section>
+
+  <!-- TODO transform -->
+  <section class="slide">
+    <h2>transform</h2>
+    <p><b>transform</b> позволяет манипулировать элементами, изменяя их форму, размер и положение</p>
+    <ol>
+      <li><b>none</b> — никакого преобразования не применяется</li>
+      <li><b>rotate(angle)</b> — вращает элемент на заданный угол</li>
+      <li><b>scale(x, y)</b> — масштабирует элемент по осям X и Y</li>
+      <li><b>translate(x, y)</b> — перемещает элемент на заданные координаты</li>
+      <li><b>skew(x, y)</b> — наклоняет элемент на заданные углы по осям X и Y</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>transform: rotate(angle)</h2>
+    <p><b>rotate(angle)</b> — вращает элемент на заданный угол</p>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      >До</div>
+      <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 123, 0);
+          transform: rotate(15deg);
+        "
+      >После</div>
+      </div>
+      <pre>
+        <code>.elem {</code>
+        <code>  transform: rotate(45deg);</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>transform: scale(x, y)</h2>
+    <p><b>scale(x, y)</b> — масштабирует элемент по осям X и Y</p>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      >До</div>
+      <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 123, 0);
+          transform: scale(1.5);
+        "
+      >После</div>
+      </div>
+      <pre>
+        <code>.elem {</code>
+        <code>  transform: scale(1.5);</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>transform: skew(x, y)</h2>
+    <p><b>translate(x, y)</b> — позволяет вам наклонять элемент по осям X и Y</p>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      >До</div>
+      <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 123, 0);
+          transform: skew(20deg, 10deg);
+        "
+      >После</div>
+      </div>
+      <pre>
+        <code>.elem {</code>
+        <code>  transform: skew(20deg, 10deg);</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>transform: translate(x, y)</h2>
+    <p><b>translate(x, y)</b> — перемещает элемент на заданные координаты</p>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      >До</div>
+      <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 123, 0);
+          transform: translate(50px, 100px);
+        "
+      >После</div>
+      </div>
+      <pre>
+        <code>.elem {</code>
+        <code>  transform: translate(50px, 100px);</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>translate*</h2>
+    <ol>
+      <li><b>translateX(X), translateY(Y), translateZ(Z)</b> — сместить элемент вдоль конкретной оси</li>
+      <li><b>translate3d(X, Y, Z)</b> — сместить элемент по всем трём осям</li>
+    </ol>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      >До</div>
+      <div class="elem"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 123, 0);
+          transform: translateX(50px);
+          transform: translateY(90px);
+        "
+      >После</div>
+      </div>
+      <pre>
+        <code>.elem {</code>
+        <code>  transform: translateX(50px);</code>
+        <code>  transform: translateY(90px);</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Анимация превращений</h2>
+    <p><mark>transform</mark> анимируется с помощью свойства <b>transition</b> или ключевых кадров (<b>@keyframes</b>).</p>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem elem-transform"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+        "
+      ></div>
+      </div>
+      <pre>
+        <code>.elem:hover {</code>
+        <code>  transform: skew(20deg, 20deg);</code>
+        <code>  transition: transform 2s;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Анимация превращений</h2>
+    <p><mark>transform</mark> анимируется с помощью свойства <b>transition</b> или ключевых кадров (<b>@keyframes</b>).</p>
+    <pre>
+      <code>.elem { animation: elem-transform 4s infinite alternate; }</code>
+    </pre>
+    <div class="columns two">
+      <div style="display: flex; gap: 40px;">
+        <div class="elem elem-transform"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px;
+          height: 100px;
+          background-color: rgb(0, 183, 255);
+          animation: elem-transform 4s infinite alternate;
+        "
+      ></div>
+      </div>
+
+      <pre>
+        <code>@keyframes elem-transform {</code>
+        <code>  0% { transform: scale(1); }</code>
+        <code>  50% { transform: scale(1.2); }</code>
+        <code>  100% { transform: rotate(-30deg); }</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>transform + transition</h2>
+    <ul>
+      <li>CSS свойство <b>transform</b> позволяет применять 2D и 3D преобразования к элементам</li>
+      <li>с помощью <b>transform</b> можно вращать, масштабировать, перемещать и наклонять элементы</li>
+      <li>вместе с <b>transition</b> можно делать анимации</li>
+    </ul>
+  </section>
+
+  <!-- TODO Как спрятать блок? -->
+  <section class="slide">
+    <h2>Как спрятать блок?</h2>
+    <div class="columns two">
+      <ol>
+        <li>display: none</li>
+        <li>visibility: hidden</li>
+        <li>opacity: 0</li>
+        <li>атрибут <b>hidden</b> для html-элемента</li>
+      </ol>
+      <div style="display: flex; gap: 14px;">
+        <div style="
+              width: 50px;
+              height: 50px;
+              background-color: #b3325d;
+            "></div>
+        <div style="
+            width: 50px;
+            height: 50px;
+            background-color: #0d67b1;
+          "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Как спрятать блок?</h2>
+    <div class="columns two">
+      <ol>
+        <li><mark>display: none</mark></li>
+        <li>visibility: hidden</li>
+        <li>opacity: 0</li>
+        <li>атрибут <b>hidden</b> для html-элемента</li>
+      </ol>
+      <div style="display: flex; gap: 14px;">
+        <div style="
+              width: 50px;
+              height: 50px;
+              background-color: #b3325d;
+            "></div>
+        <div style="
+            width: 50px;
+            height: 50px;
+            background-color: #0d67b1;
+            display: none;
+          "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Как спрятать блок?</h2>
+    <div class="columns two">
+      <ol>
+        <li>display: none</li>
+        <li><mark>visibility: hidden</mark></li>
+        <li>opacity: 0</li>
+        <li>атрибут <b>hidden</b> для html-элемента</li>
+      </ol>
+      <div style="display: flex; gap: 14px;">
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #0d67b1;
+          visibility: hidden;
+        "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Как спрятать блок?</h2>
+    <div class="columns two">
+      <ol>
+        <li>display: none</li>
+        <li>visibility: hidden</li>
+        <li><mark>opacity: 0</mark></li>
+        <li>атрибут <b>hidden</b> для html-элемента</li>
+      </ol>
+      <div style="display: flex; gap: 14px;">
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #0d67b1;
+          opacity: 0;
+        "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Как спрятать блок?</h2>
+    <div class="columns two">
+      <ol>
+        <li>display: none</li>
+        <li>visibility: hidden</li>
+        <li>opacity: 0</li>
+        <li>атрибут <mark><b>hidden</b></mark> для html-элемента</li>
+      </ol>
+      <div style="display: flex; gap: 14px;">
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #0d67b1;
+        " hidden></div>
+        <div style="
+          width: 50px;
+          height: 50px;
+          background-color: #b3325d;
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Как спрятать блок доступно?</h2>
+
+    <p><b>box-suppress</b> со значениями show, discard и hide отвязывает видимость блока от display</p>
+    <p><mark>Находится в статусе черновика</mark></p>
+
+    <pre>
+      <code>.block {</code>
+      <code>  box-suppress: hide;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>"visually hidden"</h2>
+
+    <pre>
+      <code>&lt;h2 class=&quot;visually-hidden&quot;&gt;&#1079;&#1072;&#1075;&#1086;&#1083;&#1086;&#1074;&#1086;&#1082;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1075;&#1086; &#1085;&#1077; &#1074;&#1080;&#1076;&#1085;&#1086; &#1085;&#1072; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1077;&lt;/h2&gt;</code>
+    </pre>
+
+    <pre style="font-size: 14px;">
+      <code>.visually-hidden {</code>
+      <code>  position: absolute;</code>
+      <code>  width: 1px;</code>
+      <code>  height: 1px;</code>
+      <code>  margin: -1px;</code>
+      <code>  border: 0;</code>
+      <code>  padding: 0;</code>
+      <code>  white-space: nowrap;</code>
+      <code>  clip-path: inset(100%);</code>
+      <code>  clip: rect(0 0 0 0);</code>
+      <code>  overflow: hidden;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>pointer-events</h2>
+    <p>CSS-свойство <b>pointer-events</b> позволяет контролировать события, при которых элемент может стать объектом события мыши</p>
+    <ol>
+      <li>pointer-events: auto;</li>
+      <li>pointer-events: none;</li>
+      <li>все остальные значения <b>pointer-events</b> работают только для SVG</li>
+    </ol>
+  </section>
+
+  <!-- TODO Верстка выплывающих элементов -->
+  <section class="slide">
+    <h2>Верстка выплывающих элементов</h2>
+    <div class="columns two">
+      <div style="display: flex; gap: 14px; position: relative;">
+        <div class="target-block" style="
+              width: 150px;
+              height: 150px;
+              background-color: #b3325d;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+            ">target</div>
+        <div class="hidden-block" style="
+            width: 150px;
+            height: 150px;
+            background-color: #0d67b1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+          ">hidden</div>
+      </div>
+      <pre>
+        <code>.hidden-block {</code>
+        <code>  <mark>position: absolute;</mark></code>
+        <code>  top: 0;</code>
+        <code>  right: 0;</code>
+        <code>  <mark>opacity: 0;</mark></code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Верстка выплывающих элементов</h2>
+    <p>1. Верстка невидимого блока с появлением <mark>при наведении</mark></p>
+    <div class="columns two">
+      <div style="display: flex; gap: 14px; position: relative;">
+        <div class="target-block">target</div>
+        <div class="hidden-block hidden-block__hover">hidden</div>
+      </div>
+      <pre>
+        <code>.target-block:hover + .hidden-block {</code>
+        <code>  opacity: 1;</code>
+        <code>  transition: opacity 0.3s ease-in;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Верстка выплывающих элементов</h2>
+    <p>2. Верстка невидимого блока с появлением <mark>в состоянии фокуса</mark></p>
+    <div class="columns two">
+      <div style="display: flex; gap: 14px; position: relative;">
+        <div class="target-buttons">
+          <button class="btn">Кнопка</button>
+          <button class="btn">Кнопка</button>
+          <button class="btn">Кнопка</button>
+          <button class="btn">Кнопка</button>
+          <button class="btn target-button">target</button>
+        </div>
+        <div class="hidden-block hidden-block__focus">hidden</div>
+      </div>
+      <pre>
+        <code>.wrap <mark class="important">:has(button:focus)</mark> + .hidden-block {</code>
+        <code>  opacity: 1;</code>
+        <code>  transition: opacity 0.3s ease-in;</code>
+        <code>}</code>
+      </pre>
+    </div>
+    <p style="text-align: right;"><a href="https://caniuse.com/css-has" target="_blank">can i use :has() CSS relational pseudo-class</a></p>
+  </section>
+
+  <section class="slide">
+    <h2>Верстка выплывающих элементов</h2>
+    <p>3. Верстка невидимого блока с появлением <mark>при добавлении класса</mark> с помощью JavaScript</p>
+    <div class="columns two">
+      <div style="display: flex; align-items: flex-start; gap: 14px; position: relative;">
+        <button class="btn target-button" data-add-class="target">Добавить класс show</button>
+        <div class="hidden-block hidden-block__with-class" data-add-class="hidden">hidden</div>
+      </div>
+      <pre>
+        <code>.show {</code>
+        <code>  opacity: 1;</code>
+        <code>}</code>
+      </pre>
+    </div>
+
+    <script>
+      let targeBtn = document.querySelector('[data-add-class="target"]');
+      let hiddenBlock = document.querySelector('[data-add-class="hidden"]');
+
+      targeBtn.addEventListener('click', () => {
+        hiddenBlock.classList.toggle('show');
+      });
+    </script>
+  </section>
+
+  <section class="slide">
+    <h2>Верстка выплывающих элементов</h2>
+    <pre>
+      <code>&lt;script&gt;</code>
+      <code>  let targeBtn = document.querySelector('[data-add-class=&quot;target&quot;]');</code>
+      <code>  let hiddenBlock = document.querySelector('[data-add-class=&quot;hidden&quot;]');</code>
+      <code>  </code>
+      <code>  targeBtn.addEventListener('click', () =&gt; {</code>
+      <code>    hiddenBlock.classList.toggle('show');</code>
+      <code>  });</code>
+      <code>&lt;/script&gt;</code>
+    </pre>
+  </section>
+
+
+
+
+
+
 
 
 
