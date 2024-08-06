@@ -1472,7 +1472,7 @@
 
     <img src="img/coord.png" alt="" style="
       width: 100%;
-      max-height: 280px;
+      max-height: 250px;
       object-fit: contain;
     ">
   </section>
@@ -1490,21 +1490,68 @@
 
   <section class="slide">
     <h2>top, bottom, left, и right</h2>
-    <p><b>top, bottom, left, и right</b> используются вместе со свойством <b>position</b> чтобы указать куда именно перемещать позиционируемый элемент. Значения координат могут быть и отрицательными</p>
+    <p><b>top, bottom, left, и right</b> используются вместе со свойством <b>position</b> чтобы указать куда именно перемещать позиционируемый элемент. Значения координат могут быть отрицательными</p>
   </section>
 
+  <section class="slide">
+    <h2>z-index</h2>
+    <p><b>z-ось</b> — воображаемая линия, которая направляется от поверхности вашего экрана к вашему лицу </p>
 
+    <img src="img/phone.png" alt="" style="
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      max-height: 270px;
+    ">
+  </section>
 
+  <section class="slide">
+    <h2>position</h2>
+    <p>Свойство <b>position</b> задаёт способ позиционирования элемента в документе</p>
 
+    <ol>
+      <li><b>static</b></li>
+      <li><b>relative </b></li>
+      <li><b>absolute</b></li>
+      <li><b>fixed</b></li>
+      <li><b>sticky</b></li>
+    </ol>
+  </section>
 
+  <section class="slide">
+    <h2>position: static;</h2>
+    <p>значение по умолчанию, элемент позиционируется в соответствии с его местом в потоке документа</p>
+    <img src="" alt="position: static" width="250" height="250">
+  </section>
 
+  <section class="slide">
+    <h2>position: relative;</h2>
+    <p>элемент позиционируется относительно своего исходного положения в потоке документа</p>
+    <img src="" alt="position: relative" width="250" height="250">
+  </section>
 
+  <section class="slide">
+    <h2>position: absolute;</h2>
+    <p>элемент позиционируется относительно ближайшего родительского элемента, который имеет позиционирование, отличное от <b>static</b></p>
+    <img src="" alt="position: absolute" width="250" height="250">
+  </section>
 
+  <section class="slide">
+    <h2>position: fixed;</h2>
+    <p>элемент позиционируется относительно окна браузера</p>
+    <img src="" alt="position: fixed" width="250" height="250">
+  </section>
 
+  <section class="slide">
+    <h2>position: sticky;</h2>
+    <p>элемент остаётся на месте при прокрутке страницы, но при этом может быть отодвинут от своей стандартной позиции</p>
+    <img src="" alt="position: sticky" width="250" height="250">
+  </section>
 
-
-
-
+  <!-- TODO адаптивная графика -->
+  <section class="slide clear">
+    <h2 class="shout">Адаптивная графика</h2>
+  </section>
 
   <section class="slide">
     <h2>Пиксель</h2>
@@ -1582,79 +1629,580 @@
   </pre>
   </section>
 
-  <!-- TODO   -->
   <section class="slide">
-    <h2>Вертикальный ритм</h2>
-    <p><b>Вертикальный ритм </b> — это концепция, пришедшая из полиграфии. Мы
-      пытаемся сохранить на странице вертикальное пространство между элементами,
-      согласованными друг с другом</p>
+    <h2>&lt;picture&gt;</h2>
+
+    <p>Тег <b>&lt;picture&gt;</b> позволяет разработчикам указать несколько источников изображения для различных устройств и разрешений экрана, чтобы браузер мог выбрать подходящее изображение в зависимости от возможностей устройства пользователя</p>
   </section>
 
   <section class="slide">
-    <h2>Высота строки</h2>
-    <p>При прочих отсутствующих значениях, высота строчного блока равна значению
-      <b>line-height</b>
-    </p>
+    <h2>&lt;picture&gt;</h2>
+
     <pre>
-          <code>p {</code>
-          <code>  font-size: 18px;</code>
-          <code>  line-height 1.5; </code>
-        <code>}</code>
-      </pre>
+      <code> &lt;picture&gt;</code>
+      <code>  &lt;source srcset=&quot;image-small.jpg&quot; media=&quot;(max-width: 768px)&quot;&gt;</code>
+      <code>  &lt;source srcset=&quot;image-medium.jpg&quot; media=&quot;(max-width: 1024px)&quot;&gt;</code>
+      <code>  &lt;source srcset=&quot;image-large.jpg&quot;&gt;</code>
+      <code>  &lt;img src=&quot;image-default.jpg&quot; alt=&quot;Image description&quot;&gt;</code>
+      <code>&lt;/picture&gt;</code>
+    </pre>
   </section>
 
   <section class="slide">
-    <h2>Зачем верстальщику разбираться в дизайне</h2>
-    <div class="columns two" style="grid-template-columns: 50% 1fr">
-      <ol>
-        <li>умение видеть ошибки и задумки</li>
-      </ol>
-      <img src="img/ui-kit-4.jpg" width="auto" height="100%" alt="" style="
-        object-fit: cover;
-        max-height: 389px;
-        margin: 0 auto;
-        display: flex;
-      ">
-    </div>
+    <h2>"Ретинизация" контентных изображений </h2>
+
+    <pre>
+      <code>&lt;img</code>
+      <code>  src=&quot;cat.jpg&quot;</code>
+      <code>  alt=&quot;Изображение с котом&quot;</code>
+      <code>  width=&quot;360&quot;</code>
+      <code>  height=&quot;240&quot;</code>
+      <code>  <mark>srcset=&quot;cat@1x.jpg 1x, cat@2x.jpg 2x, cat@3x.jpg 3x&quot;</mark></code>
+      <code>&gt;</code>
+    </pre>
   </section>
 
   <section class="slide">
-    <h2>Работа с макетом</h2>
-    <div class="columns two" style="grid-template-columns: 50% 1fr">
-      <ol>
-        <li>Графические редакторы</li>
-        <li>Сетки</li>
-        <li>Типографика</li>
-        <li>Цвет</li>
-        <li>Базовый UX</li>
-        <li>Адаптивность</li>
-      </ol>
-      <img src="img/ui-kit-4.jpg" width="auto" height="100%" alt="" style="
-      object-fit: cover;
-      max-height: 389px;
-      margin: 0 auto;
-      display: flex;
-    ">
-    </div>
+    <h2>source</h2>
+
+    <pre>
+      <code>&lt;picture&gt;</code>
+      <code>  &lt;source media=&quot;(min-width: 1200px)&quot; srcset=&quot;img/img-desktop.svg&quot;&gt;</code>
+      <code>  &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;img/img-tablet.svg&quot;&gt;</code>
+      <code>&lt;/picture&gt;</code>
+    </pre>
+  </section>
+
+  <!-- TODO Форматы графики -->
+  <section class="slide">
+    <h2>Форматы графики</h2>
+
+    <ol>
+      <li><b>JPG (JPEG)</b> — наиболее оптимальный. Поддерживает 16 млн. цветов. Имеет небольшой размер файла</li>
+      <li><b>PNG</b> — много весит. Поддерживает 16 млн. цветов. Имеет большой размер файла. Поддерживает прозрачность</li>
+      <li><b>GIF</b> — низкое качество. Поддерживает всего 256 цветов. Имеет небольшой размер файла. Поддерживает прозрачность</li>
+      <li><b>WebP</b> — поддерживает 16 млн. цветов. Имеет минимальный размер файла. Поддерживает прозрачность и даже анимацию</li>
+    </ol>
   </section>
 
   <section class="slide">
-    <h2>Нужно ли верстальщику разбираться в дизайне?</h2>
-    <img src="img/ui-kit-5.jpg" width="auto" height="100%" alt="" style="
-        object-fit: cover;
-        width: 40%;
-        max-height: 350px;
-        margin: 0 auto;
-        display: flex;
-      ">
+    <h2>WebP</h2>
+    <p><b>WebP</b> объединяет все достоинства форматов JPEG, PNG и GIF: сжатие с потерями и без потерь, поддержку прозрачности и анимации</p>
+    <ul>
+      <li>сжатие изображения без потерь на 26% лучше, чем у PNG</li>
+      <li>сжатие изображения с потерями лучше JPEG на 25-34% при одинаковом индексе структурного сходства</li>
+      <li>поддержка прозрачности без потерь при увеличении размера всего на 22%</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>AVIF</h2>
+    <p><b>AVIF</b> — свободный формат сжатия с потерями качества, основанный на библиотеке для сжатия кадров AV1</p>
+    <ul>
+      <li>значительное уменьшение размера файла при сохранении визуального качества изображения</li>
+      <li>поддержка анимированных изображений</li>
+      <li>поддержка прозрачности</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Браузерная совместимость</h2>
+    <p><b> WebP и AVIF</b> — иммеют неполную поддержку бразерами</p>
+
+    <ol>
+      <li><a href="https://caniuse.com/?search=webp" target="_blank">can i use: webp</a></li>
+      <li><a href="https://caniuse.com/?search=avif" target="_blank">can i use: avif</a></li>
+    </ol>
+  </section>
+
+  <!-- TODO Оптимизация изображений -->
+  <section class="slide">
+    <h2>Оптимизация изображений</h2>
+    <p>это процесс сжатия изображения и настройки параметров его отображения для оптимального использования</p>
+    <ol>
+      <li>повышение производительности</li>
+      <li>SEO-оптимизация</li>
+      <li>оптимизация изображений для социальных сетей</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Оптимизация изображений для социальных сетей</h2>
+    <p>С помощью специальных мета-тегов вы можете настроить заголовок ссылки, текст описания, изображение, сопровождающее ссылку на странице в социальной сети</p>
+  </section>
+
+  <section class="slide">
+    <h2>SEO-оптимизация</h2>
+    <ol>
+      <li>названия файлов изображений</li>
+      <li>карта сайта для изображений</li>
+      <li>индексация изображений</li>
+      <li>атрибут title</li>
+      <li>атрибут alt</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Повышение производительности</h2>
+    <ol>
+      <li>масштабирование</li>
+      <li>сжатие</li>
+      <li>использование CDN</li>
+      <li>выбор подходящего формата</li>
+      <li>использование отзывчивых изображений</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Сервисы по оптимизации изображений</h2>
+    <ol>
+      <li><a href="https://imagecompressor.com/ru/" target="_blank">Optimizilla</a></li>
+      <li><a href="https://tinypng.com/" target="_blank">TinyPNG</a></li>
+      <li><a href="https://compressor.io/" target="_blank">Compressor.io</a></li>
+      <li><a href="https://squoosh.app/" target="_blank">Squoosh</a></li>
+    </ol>
+  </section>
+
+  <!-- TODO Векторная графика  -->
+  <section class="slide">
+    <h2>Векторная графика </h2>
+    <p><b>Векторная графика</b> — способ представления графических объектов и изображений (формат описания) в компьютерной графике, основанный на математическом описании элементарных геометрических объектов, обычно называемых примитивами, таких как: точки, линии, сплайны, кривые Безье, круги, окружности, эллипсы, многоугольники</p>
+  </section>
+
+  <section class="slide">
+    <h2>SVG</h2>
+    <p><b>SVG (scalable vector graphics)</b> — масштабируемая векторная графика. Используется для отрисовки:</p>
+    <ol>
+      <li>геометрических фигур и линий</li>
+      <li>логотипов</li>
+      <li>элементов интерфейса на странице</li>
+      <li>простых картинок и иллюстраций</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Преимущества векторной графики</h2>
+    <ol>
+      <li>легкость масштабирования</li>
+      <li>небольшой размер файла</li>
+      <li>удобство редактирования</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Недостатки векторной графики</h2>
+    <ol>
+      <li>сложность создания</li>
+      <li>трудности совместимости</li>
+      <li>не подходит для фотографий</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Подготовка и оптимизация SVG</h2>
+    <p>Перед использованием SVG желательно его оптимизировать. Можно вручную удалить все ненужное или воспользоваться программой по оптимизации SVG. Наиболее известная и полезная программа для обработки SVG это <a href="https://jakearchibald.github.io/svgomg/" target="_blank">SVGOMG</a>. Она удаляет весь не нужный код</p>
+  </section>
+
+  <section class="slide">
+    <h2>Встраивание SVG на страницу</h2>
+
+    <pre>
+      <code>&lt;svg width=&quot;200&quot; height=&quot;200&quot; viewBox=&quot;0 0 100 100&quot;&gt;</code>
+    </pre>
+    <img src="img/svg.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>Встраивание SVG на страницу</h2>
+    <p><mark>1. способ</mark></p>
+
+    <p>Самый простой способ добавить SVG на страницу — с помощью элемента &lt;img&gt;, который размещается прямо в HTML-коде</p>
+    <pre>
+      <code>&lt;img src=&quot;icon.svg&quot; alt=&quot;&quot; width=&quot;300px&quot; height=&quot;200px&quot;&gt;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Встраивание SVG на страницу</h2>
+    <p><mark>2. способ</mark></p>
+
+    <p>SVG как фоновая картинка в CSS</p>
+    <pre>
+      <code>.img {</code>
+      <code>  background-image: url(icon.svg);</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Встраивание SVG на страницу</h2>
+    <p><mark>3. способ</mark></p>
+
+    <p>Вставить содержимое SVG-файлов прямо на страницу</p>
+    <pre>
+      <code>&lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;</code>
+      <code>  &lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;</code>
+      <code>&lt;/a&gt;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Встраивание SVG на страницу</h2>
+    <p><mark>4. дополнительные способы</mark></p>
+
+    <ul>
+      <li>с помощью тега &lt;iframe&gt</li>
+      <li>с помощью тега &lt;object&gt;</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Зачем нужно SVG</h2>
+    <ul>
+      <li>масштабирование</li>
+      <li>небольшой размер файла</li>
+      <li>программируемость</li>
+      <li>изображения SVG можно создавать, конструировать и редактировать с помощью любого удобного текстового редактора</li>
+      <li>сжатие файлов</li>
+      <li>доступность</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Зачем нужно SVG</h2>
+    <ul>
+      <li>производительность</li>
+      <li>фнимация и взаимодействие</li>
+      <li>стилизация</li>
+      <li>гибкость</li>
+      <li>фон SVG по умолчанию прозрачный</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Анимация в SVG</h2>
+
+    <p>Есть два основных способа анимации SVG элемента:</p>
+    <ol>
+      <li>CSS анимация</li>
+      <li>SMIL анимация, встроенная в SVG</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>SMIL</h2>
+
+    <ol>
+      <li>сделать то, что не смог CSS</li>
+      <li>иметь более точный контроль над анимацией</li>
+      <li>сделать морфинг контура (анимация атрибута d у тега path)</li>
+      <li>синхронизировать анимации</li>
+      <li>сделать интерактивные анимации</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Анимация средствами CSS</h2>
+
+    <p>Любой SVG элемент мы можем анимировать так же, как мы это делаем с HTML. Все анимации создаются с помощью <b>@keyframes</b></p>
+  </section>
+
+  <!-- TODO Практика по изображениям -->
+  <section class="slide clear">
+    <h2>Практика</h2>
+
+    <ol>
+      <li>экспортировать иконки из Figma</li>
+      <li>оптимизировать экспортированные иконки помощью сервиса SVGOMG</li>
+      <li>расставить в разметке SVG пропущенные атрибуты width, height, viewBox</li>
+      <li>заменить определение цвета в заливке и обводке на значение currentColor</li>
+      <li>добавить на страницу декоративные элементы</li>
+      <li>иконки встроить в разметку инлайновым способом</li>
+    </ol>
+  </section>
+
+  <!-- TODO адаптивный веб-дизайн  -->
+  <section class="slide">
+    <h2>Адаптивный веб-дизайн</h2>
+
+    <p>Это подход к веб-дизайну или набор лучших практик, используемых для создания макета, который может реагировать на используемое устройство для просмотра контента</p>
+  </section>
+
+  <!-- TODO Медиавыражения в CSS  -->
+  <section class="slide">
+    <h2>Медиавыражения в CSS</h2>
+
+    <p><b>Медиавыражения</b> позволяют нам проводить серию тестов (например, является ли экран пользователя больше, чем определённая ширина или разрешение) и выборочно применять CSS к стилю страницы соответственно с нуждами пользователя</p>
+
+    <pre>
+      <code>@media [тип устройства] [характеристика устройства] {</code>
+      <code>  /* CSS-правила */</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Типы устройств</h2>
+    <ol>
+      <li><b>all</b> — медиавыражение применится ко всем устройствам</li>
+      <li><b>print</b> — стили внутри такого медиавыражения применятся при печати на принтерах или экспорте в PDF, в том числе в режиме предпросмотра документа</li>
+      <li><b>screen</b> — для устройств с экранами</li>
+    </ol>
+
+    <pre style="font-size: 16px; margin-top: -26px;">
+      <code>@media print and (orientation: landscape) {</code>
+      <code>  .block {</code>
+      <code>    font-size: 25pt;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Характеристики устройства</h2>
+    <ol>
+      <li>resolution</li>
+      <li>min-resolution</li>
+      <li>max-resolution</li>
+    </ol>
+
+    <pre style="">
+      <code>@media (max-resolution: 300dpi) {</code>
+      <code>  .block {</code>
+      <code>    font-size: 25pt;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Характеристики страницы и окна браузера </h2>
+    <ol>
+      <li>width</li>
+      <li>min-width</li>
+      <li>max-width</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>orientation — ориентация окна браузера</h2>
+    <ol>
+      <li><b>landscape</b> — альбомная, горизонтальная ориентация</li>
+      <li><b>portrait</b> — портретная, вертикальная ориентация</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Логические операторы</h2>
+    <p>В медиавыражении может быть перечислено несколько условий через запятую. В таком случае стили применятся для любого из указанных условий</p>
+    <pre>
+      <code>@media (orientation: landscape), (max-width: 960px) {</code>
+      <code>  .text {</code>
+      <code>    color: tomato;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Логические операторы</h2>
+    <p>Часто в медиавыражениях может использоваться ключевое слово <b>and</b>, реже встречаются ключевые слова <b>not</b> и <b>only</b>. Если мы пишем и тип устройства, и указываем характеристики, то после типа обязательно пишется <b>and</b></p>
+
+    <pre>
+      <code>@media print and (min-width: 320px) {</code>
+      <code>  .text {</code>
+      <code>    text-decoration: underline;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Логические операторы</h2>
+    <p>Также <b>and</b> пишется между характеристиками</p>
+
+    <pre>
+      <code>@media (min-width: 320px) and (max-width: 640px) {</code>
+      <code>  .text {</code>
+      <code>    text-decoration: underline;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Синтаксис диапазонов</h2>
+    <p>Новые операторы <mark>&lt;, &gt;, &gt;= &#1080; &lt;=</mark> более интуитивно указывают, например, для каких размеров экрана применять правила из медиавыражения</p>
+
+    <pre>
+      <code>@media (680px <= width >= 1280px) {</code>
+      <code>  .text {</code>
+      <code>    color: red;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide clear">
+    <h2 class="shout">Практика</h2>
   </section>
 
   <!-- TODO Материалы и ссылки -->
   <section class="slide">
-    <h2>Материалы и ссылки ч.1/5</h2>
+    <h2>Материалы и ссылки ч.1/6</h2>
     <ol>
       <li>
-        <a href="https" target="_blank">Статья</a>
+        <a href="https://htmlacademy.ru/blog/css/position" target="_blank">Как позиционировать элементы в CSS. Свойство position</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Positioning" target="_blank">Позиционирование</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position" target="_blank">position</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/tools/coordinate" target="_blank">Координаты (js)</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Normal_Flow" target="_blank">Базовый поток</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/css/hover-focus-active" target="_blank">События при наведении. :hover, :focus, :active в CSS</a>
+      </li>
+      <li>
+        <a href="https://rachelandrew.co.uk/archives/2016/07/22/the-proposed-box-suppress-property/" target="_blank">Rachel Andrew. The proposed box-suppress property</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.2/6</h2>
+    <ol>
+      <li>
+        <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-hidden-attribute" target="_blank">The hidden attribute</a>
+      </li>
+      <li>
+        <a href="https://allyjs.io/tutorials/hiding-elements.html" target="_blank">Hiding DOM elements</a>
+      </li>
+      <li>
+        <a href="http://csskarma.com/blog/difference-rolepresentation-aria-hiddentrue/" target="_blank">The Difference Between role=” presentation” and aria-hidden=” true”</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/css/short-12" target="_blank">Как прятать</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/pointer-events" target="_blank">pointer-events</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/css/transform-demo" target="_blank">Как работает transform в CSS на примерах</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/transform" target="_blank">transform</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.3/6</h2>
+    <ol>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/Forms/Styling_web_forms" target="_blank">Стили HTML-формы</a>
+      </li>
+      <li>
+        <a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/" target="_blank">Styling Cross-Browser Compatible Range Inputs with CSS</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/html/popover/" target="_blank">Popover API</a>
+      </li>
+      <li>
+        <a href="https://developer.chrome.com/blog/anchor-positioning-api?hl=ru" target="_blank">Представляем API позиционирования привязки CSS</a>
+      </li>
+      <li>
+        <a href="https://css-tricks.com/the-selectmenu-element/" target="_blank">Say Hello to selectmenu, a Fully Style-able select Element</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes" target="_blank">UI pseudo-classes</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/css/appearance/" target="_blank">appearance</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.4/6</h2>
+    <ol>
+      <li>
+        <a href="https://doka.guide/css/box-sizing/" target="_blank">box-sizing</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank">Адаптивные изображения</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/picture" target="_blank">Элемент &lt;picture&gt;</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/html-tags/picture" target="_blank">picture — адаптивное изображение</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/html/adaptive-srcset" target="_blank">Как создавать адаптивные изображения. Атрибут srcset</a>
+      </li>
+      <li>
+        <a href="https://imagecompressor.com/ru/" target="_blank">Optimizilla</a>
+      </li>
+      <li>
+        <a href="https://tinypng.com/" target="_blank">TinyPNG</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.5/6</h2>
+    <ol>
+      <li>
+        <a href="https://compressor.io/" target="_blank">Compressor.io</a>
+      </li>
+      <li>
+        <a href="https://squoosh.app/" target="_blank">Squoosh</a>
+      </li>
+      <li>
+        <a href="https://jakearchibald.github.io/svgomg/" target="_blank">SVGOMG</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/blog/html/short-4" target="_blank">Как правильно вставлять SVG</a>
+      </li>
+      <li>
+        <a href="https://habr.com/ru/articles/450924/" target="_blank">Все об SVG анимации</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/css/animation/" target="_blank">CSS-анимации</a>
+      </li>
+      <li>
+        <a href="https://cubic-bezier.com/#.17,.67,.83,.67" target="_blank">График кривой Безье</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.6/6</h2>
+    <ol>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Отзывчивый дизайн</a>
+      </li>
+      <li>
+        <a href="https://alistapart.com/article/responsive-web-design/" target="_blank">Responsive Web Design</a>
+      </li>
+      <li>
+        <a href="https://alistapart.com/article/fluidgrids/" target="_blank">Fluid Grids</a>
+      </li>
+      <li>
+        <a href="https://unstoppablerobotninja.com/entry/fluid-images/" target="_blank">Fluid images</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_media_queries" target="_blank">Media queries</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/css/media/" target="_blank">@media</a>
       </li>
     </ol>
   </section>
