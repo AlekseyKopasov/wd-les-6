@@ -341,13 +341,15 @@
 
   <section class="slide">
     <h2>Состояния интерактивных элементов</h2>
-    <img src="img/картинка для состояний.jpg" width="auto" height="100%"
-      alt="Состояния интерактивных элементов" style="
-        object-fit: cover;
-        max-height: 389px;
-        margin: 0 auto;
-        display: flex;
-      ">
+    <figure>
+      <img src="img/form-state.jpg" width="100%" height="100%" alt="" style="
+      max-height: 370px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+    </figure>
   </section>
 
   <section class="slide">
@@ -473,6 +475,15 @@
   <!-- TODO Анимации в CSS -->
   <section class="slide">
     <h2>Анимации в CSS</h2>
+    <figure>
+      <img src="img/css-anim.jpg" width="100%" height="100%" alt="" style="
+      max-height: 370px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+    </figure>
   </section>
 
   <section class="slide">
@@ -1446,6 +1457,22 @@
   <!-- TODO Поток документа -->
   <section class="slide">
     <h2>Поток документа</h2>
+    <figure>
+      <img src="img/flow.jpg" width="100%" height="100%" alt="" style="
+      max-height: 370px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+    </figure>
+    <ol>
+      <li><b>блочные элементы</b> занимают всю ширину документа. Располагаются вертикально</li>
+      <li><b>строчные элементы</b> не переносятся на новые строки; строчные элементы располагаются на той же строке, что и другие и занимают всю ширину родительского элемента, до тех пор, пока не закончится пространство</li>
+    </ol>
+  </section>
+  <section class="slide">
+    <h2>Поток документа</h2>
     <ol>
       <li><b>блочные элементы</b> занимают всю ширину документа. Располагаются вертикально</li>
       <li><b>строчные элементы</b> не переносятся на новые строки; строчные элементы располагаются на той же строке, что и другие и занимают всю ширину родительского элемента, до тех пор, пока не закончится пространство</li>
@@ -1457,10 +1484,11 @@
 
     <p><b>поток документа</b> — это система, посредством которой элементы размещаются внутри окна просмотра браузера</p>
 
-    <img src="img/flow-1.png" alt="" style="
-      width: 100%;
-      max-height: 280px;
-      object-fit: contain;
+    <img src="img/flow-1.png" width="100%" height="100%" alt="" style="
+    max-height: 250px;
+    margin: 0 auto;
+    display: flex;
+    object-fit: contain;
     ">
   </section>
 
@@ -1521,31 +1549,51 @@
   <section class="slide">
     <h2>position: static;</h2>
     <p>значение по умолчанию, элемент позиционируется в соответствии с его местом в потоке документа</p>
-    <img src="" alt="position: static" width="250" height="250">
+    <pre>
+      <code>.element {</code>
+        <code>  position: static;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>position: relative;</h2>
     <p>элемент позиционируется относительно своего исходного положения в потоке документа</p>
-    <img src="" alt="position: relative" width="250" height="250">
+    <pre>
+      <code>.element {</code>
+        <code>  position: relative;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>position: absolute;</h2>
     <p>элемент позиционируется относительно ближайшего родительского элемента, который имеет позиционирование, отличное от <b>static</b></p>
-    <img src="" alt="position: absolute" width="250" height="250">
+    <pre>
+      <code>.element {</code>
+        <code>  position: absolute;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>position: fixed;</h2>
     <p>элемент позиционируется относительно окна браузера</p>
-    <img src="" alt="position: fixed" width="250" height="250">
+    <pre>
+      <code>.element {</code>
+        <code>  position: fixed;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>position: sticky;</h2>
     <p>элемент остаётся на месте при прокрутке страницы, но при этом может быть отодвинут от своей стандартной позиции</p>
-    <img src="" alt="position: sticky" width="250" height="250">
+    <pre>
+      <code>.element {</code>
+        <code>  position: sticky;</code>
+      <code>}</code>
+    </pre>
   </section>
 
   <!-- TODO адаптивная графика -->
@@ -1722,13 +1770,7 @@
     <ol>
       <li>повышение производительности</li>
       <li>SEO-оптимизация</li>
-      <li>оптимизация изображений для социальных сетей</li>
     </ol>
-  </section>
-
-  <section class="slide">
-    <h2>Оптимизация изображений для социальных сетей</h2>
-    <p>С помощью специальных мета-тегов вы можете настроить заголовок ссылки, текст описания, изображение, сопровождающее ссылку на странице в социальной сети</p>
   </section>
 
   <section class="slide">
@@ -2043,8 +2085,15 @@
     </pre>
   </section>
 
-  <section class="slide clear">
-    <h2 class="shout">Практика</h2>
+  <section class="slide">
+    <h2>Практика</h2>
+    <ol>
+      <li>Создать разметку модального окна учебного проекта</li>
+      <li>Стилизовать модальное окно</li>
+      <li>Разбор модальных окон в тестовых проектах</li>
+      <li>Стилизовать оставшиеся элементы страницы учебного проекта</li>
+      <li>Добавить всю графику</li>
+    </ol>
   </section>
 
   <!-- TODO Материалы и ссылки -->
