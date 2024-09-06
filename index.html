@@ -249,6 +249,14 @@
 
   <section class="slide">
     <h2>Управление стилем на уровне ОС</h2>
+    <figure>
+      <img src="img/os.png" width="100%" height="100%" alt="" style="
+      max-height: 370px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+    </figure>
   </section>
 
   <section class="slide">
@@ -348,7 +356,7 @@
       display: flex;
       object-fit: contain;
     ">
-      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+      <cite class="small" ><a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
     </figure>
   </section>
 
@@ -482,7 +490,7 @@
       display: flex;
       object-fit: contain;
     ">
-      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+      <cite class="small" ><a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
     </figure>
   </section>
 
@@ -1464,7 +1472,7 @@
       display: flex;
       object-fit: contain;
     ">
-      <cite class="small" >Источник: <a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
+      <cite class="small" ><a href="http://www.freepik.com" target="_blank">Designed by stories / Freepik</a></cite>
     </figure>
     <ol>
       <li><b>блочные элементы</b> занимают всю ширину документа. Располагаются вертикально</li>
@@ -1536,14 +1544,23 @@
   <section class="slide">
     <h2>position</h2>
     <p>Свойство <b>position</b> задаёт способ позиционирования элемента в документе</p>
-
-    <ol>
-      <li><b>static</b></li>
-      <li><b>relative </b></li>
-      <li><b>absolute</b></li>
-      <li><b>fixed</b></li>
-      <li><b>sticky</b></li>
-    </ol>
+    <div class="columns two">
+      <ol>
+        <li><b>static</b></li>
+        <li><b>relative </b></li>
+        <li><b>absolute</b></li>
+        <li><b>fixed</b></li>
+        <li><b>sticky</b></li>
+      </ol>
+      <figure>
+        <img src="img/development.png" width="100%" height="100%" alt="" style="
+        max-height: 300px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+      </figure>
+    </div>
   </section>
 
   <section class="slide">
@@ -1755,12 +1772,22 @@
 
   <section class="slide">
     <h2>Браузерная совместимость</h2>
-    <p><b> WebP и AVIF</b> — иммеют неполную поддержку бразерами</p>
+    <p><b> WebP и AVIF</b> — имеют неполную поддержку бразерами</p>
 
     <ol>
       <li><a href="https://caniuse.com/?search=webp" target="_blank">can i use: webp</a></li>
       <li><a href="https://caniuse.com/?search=avif" target="_blank">can i use: avif</a></li>
     </ol>
+  </section>
+  <section class="slide center">
+
+    <figure>
+      <blockquote>
+        <p>VK&nbsp;Видео первым в&nbsp;России получил поддержку AV1</p>
+      </blockquote>
+      <figcaption>5 сентября 2024</figcaption>
+      <cite><a href="https://vk.company/ru/press/releases/11845/" target="_blank">Пресс-релиз</a></cite>
+    </figure>
   </section>
 
   <!-- TODO Оптимизация изображений -->
@@ -1925,22 +1952,28 @@
     <h2>Анимация в SVG</h2>
 
     <p>Есть два основных способа анимации SVG элемента:</p>
-    <ol>
-      <li>CSS анимация</li>
-      <li>SMIL анимация, встроенная в SVG</li>
-    </ol>
+    <div class="columns two">
+      <ol>
+        <li>CSS анимация</li>
+        <li>SMIL анимация, встроенная в SVG</li>
+      </ol>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="300" height="100"><path fill="none" stroke="#cc0000" stroke-dasharray="300 385" stroke-linecap="round" stroke-width="6" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="25" keySplines="0 0 1 1" repeatCount="indefinite" values="685;-685"/></path></svg>
+
+    </div>
   </section>
 
   <section class="slide">
     <h2>SMIL</h2>
-
-    <ol>
-      <li>сделать то, что не смог CSS</li>
-      <li>иметь более точный контроль над анимацией</li>
-      <li>сделать морфинг контура (анимация атрибута d у тега path)</li>
-      <li>синхронизировать анимации</li>
-      <li>сделать интерактивные анимации</li>
-    </ol>
+    <div class="columns two">
+      <ol>
+        <li>сделать то, что не смог CSS</li>
+        <li>иметь более точный контроль над анимацией</li>
+        <li>сделать морфинг контура (анимация атрибута d у тега path)</li>
+        <li>синхронизировать анимации</li>
+        <li>сделать интерактивные анимации</li>
+      </ol>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><circle cx="100" cy="100" r="0" fill="none" stroke="#0C803E" stroke-width=".5"><animate attributeName="r" calcMode="spline" dur="5" keySplines="0 .2 .5 1" keyTimes="0;1" repeatCount="indefinite" values="1;80"/><animate attributeName="stroke-width" calcMode="spline" dur="5" keySplines="0 .2 .5 1" keyTimes="0;1" repeatCount="indefinite" values="0;25"/><animate attributeName="stroke-opacity" calcMode="spline" dur="25" keySplines="0 .2 .5 1" keyTimes="0;1" repeatCount="indefinite" values="1;0"/></circle></svg>
+    </div>
   </section>
 
   <section class="slide">
