@@ -256,6 +256,11 @@ p.asinc-example__timer span {
   margin-bottom: 24px;
 }
 
+.target-block:hover + .hidden-block {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
 @keyframes circle-to-square {
   from {
     width: 50px;
